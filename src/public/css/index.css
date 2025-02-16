@@ -1,0 +1,58 @@
+.section-title {
+    font-size: 24px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.sold-label {
+    color: red;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.sold-label {
+    color: red;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: blue;
+}
+
+.product-item .sold-label~a {
+    pointer-events: none;
+    /* クリック無効化 */
+    color: gray;
+    text-decoration: line-through;
+}

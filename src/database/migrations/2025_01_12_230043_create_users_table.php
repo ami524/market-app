@@ -17,10 +17,19 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('post_code')->nullable()->change();
+            $table->string('address')->nullable();
+            $table->string('profile_image')->nullable();
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            if (!Schema::hasColumn('users', 'is_first_login')) {
+            $table->boolean('is_first_login')->default(true)->after('remember_token');
+            // 初回ログインを示すフラグ
+            }
         });
     }
 
@@ -32,5 +41,9 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('is_first_login');
+        });
     }
 }

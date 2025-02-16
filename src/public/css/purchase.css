@@ -1,0 +1,111 @@
+/* 購入ページのレイアウト */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* 左側（商品情報） */
+.left-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 上段（商品画像と商品情報） */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.product-info img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h5 {
+    margin: 0 0 10px;
+}
+
+/* 中段（支払い方法） */
+.payment-method {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.payment-method select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 下段（配送先） */
+.shipping-info {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.shipping-info a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.shipping-info a:hover {
+    text-decoration: underline;
+}
+
+/* 右側（注文情報） */
+.right-section {
+    width: 35%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* ボタンのスタイル */
+.btn-success {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-info img {
+        width: 100%;
+    }
+}

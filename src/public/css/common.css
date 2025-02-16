@@ -1,0 +1,45 @@
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .container {
+        padding: 30px;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 768px) and (max-width: 850px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}

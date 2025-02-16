@@ -1,0 +1,50 @@
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.right-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.right-buttons button:hover {
+    background-color: #0056b3;
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.search-form button {
+    padding: 5px;
+    cursor: pointer;
+}
